@@ -1,6 +1,10 @@
-job("first_DSL_job"){
+job("example_DSLjob"){
+  description("first DSL job at ${new date()}")
+  triggers{
+    scm('* * * * *')
+  }
   steps{
-      shell('echo helloooooo')
+      shell('echo hello insha')
   }
 
 }
