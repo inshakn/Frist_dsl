@@ -1,7 +1,7 @@
 job("first_DSL_job"){
-description("First DSL job created on ${date}")
+description("First DSL job created on ${new date()}")
     scm{
-           git('https://github.com/inshakn/Frist_dsl.git', master)
+           git('https://github.com/inshakn/Frist_dsl.git', 'master')
     }
     triggers{
         scm('* * * * *')
