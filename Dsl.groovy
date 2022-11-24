@@ -1,4 +1,4 @@
-job("first DSL job"){
+job("first_DSL_job"){
 description("First DSL job created on ${date}")
     scm{
            git("https://github.com/inshakn/Frist_dsl.git","master")
