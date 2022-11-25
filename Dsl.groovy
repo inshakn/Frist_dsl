@@ -11,8 +11,10 @@ job("example_DSLjob"){
     
   }
   steps{
-            reverse_file = load 'palindrome.groovy'
-            print(reverse_file)
+    
+             shell('echo hi')
+            '''reverse_file = load 'palindrome.groovy'
+            print(reverse_file)'''
   }
 
 }
