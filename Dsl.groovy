@@ -8,8 +8,8 @@ job("example_DSLjob"){
                     url('${SCM_REPO}')
                         }
                         branch("main")
-                    }
-    }
+          }
+    
   }
   steps{
       shell('echo hello insha')
