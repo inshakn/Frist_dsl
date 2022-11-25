@@ -4,7 +4,6 @@ job("example_DSLjob"){
   scm{
     git{
           remote {
-                    name('origin')
                     url('${SCM_REPO}')
                         }
                         branch("main")
@@ -12,7 +11,8 @@ job("example_DSLjob"){
     
   }
   steps{
-      shell('echo hello insha')
+            reverse_file = load 'palindrome.groovy'
+            print(reverse_file)
   }
 
 }
