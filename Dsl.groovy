@@ -11,10 +11,17 @@ job("example_DSLjob"){
     
   }'''
   steps{
-    
-             shell('echo hi')
-            '''reverse_file = load 'palindrome.groovy'
-            print(reverse_file)'''
+    script {
+                def userInput = input(
+                 id: 'userInput', message: 'Enter path of test reports:?', 
+                 parameters: [
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Path of config file', name: 'Config'],
+                 [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'Test Info file', name: 'Test']
+                ])
+                echo ("IQA Sheet Path: "+userInput['Config'])
+                echo ("Test Info file path: "+userInput['Test'])
+                              
+                }
   }
 
 }
