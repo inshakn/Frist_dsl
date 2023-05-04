@@ -1,7 +1,7 @@
 SCM_REPO = 'https://github.com/inshakn/first_dsl.git'
 job("example_DSLjob"){
   description("first DSL job at ${new Date()}")
-  '''scm{
+  scm{
     git{
           remote {
                     url('${SCM_REPO}')
@@ -9,7 +9,7 @@ job("example_DSLjob"){
                         branch("main")
           }
     
-  }'''
+  }
   steps{
     script {
                 def userInput = input(
